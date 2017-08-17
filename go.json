@@ -1,0 +1,39 @@
+{
+	"Error Check": {
+		"prefix": "error",
+		"body": [
+			"if err != nil {",
+			"\treturn err",
+			"}",
+			"",
+			"$0"
+		],
+		"description": "Checks for Error is nil"
+	},
+	"range": {
+		"prefix": "range",
+		"body": [
+			"for ${1:index},${2:item} := range ${3:items} {",
+			"\t$0",
+			"}"
+		],
+		"description": "range list"
+	},
+	"rangemap": {
+		"prefix": "rangemap",
+		"body": [
+			"for ${1:key},${2:value} := range ${3:mapName} {",
+			"\t$0",
+			"}"
+		],
+		"description": "range key and value for map"
+	},
+	":": {
+		"prefix": ":",
+		"body": [
+			"${1:varName} := ${2:varValue}",
+			"$0"
+		],
+		"description": "local varibale using :"
+	}
+}
