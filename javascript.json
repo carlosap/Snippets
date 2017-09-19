@@ -20,7 +20,62 @@
 		],
 		"description": "Try and Catch"
 	},
-	//Redux- Actions
+	//Redux/React- Actions
+
+
+	"comp": {
+		"prefix": "comp",
+		"body": [
+			"import React, { Component } from 'react';",
+			"",
+			"export default class ${1:index} extends Component {",
+			"\tconstructor(props) {",
+			"\t\tsuper(props);",
+			"\t}",
+			"",
+			"\trender() {",
+			"\t\treturn (",
+			"\t\t\t$0",
+			"\t\t);",
+			"\t}",
+			"}"
+		],
+		"description": "Basic React Component"
+	},
+	"compitem": {
+		"prefix": "compitem",
+		"body": [
+			"export default class ${1:index} extends Component {",
+			"\tconstructor(props) {",
+			"\t\tsuper(props);",
+			"\t}",
+			"",
+			"\trender() {",
+			"\t\treturn (",
+			"\t\t\t$0",
+			"\t\t);",
+			"\t}",
+			"}"
+		],
+		"description": "Basic React Component without imports"
+	},
+	"map": {
+		"prefix": "map",
+		"body": [
+      "{items.map((item) => {",
+      "\tlet retVal = null;",
+      "\t\tretVal = (<${1:CompItemName}",
+      "\t\t\titem={item}",
+			"\t\t\tkey={item.id}",
+			"\t\t\t$0",
+      "\t\t/>",
+      "\t\t);",
+      "\treturn retVal;",
+      "})}"
+		],
+		"description": "JXS Map collection"
+	},
+
 	"For Loop": {
 		"prefix": "for1",
 		"body": [
@@ -31,6 +86,7 @@
 		],
 		"description": "For Loop"
 	},
+
 	"componentDidMount": {
 		"prefix": "did",
 		"body": [
@@ -40,6 +96,7 @@
 		],
 		"description": "is invoked immediately after a component is mounted."
 	},
+	
 	"componentWillUnmount": {
 		"prefix": "un",
 		"body": [
@@ -57,5 +114,35 @@
 			"}"
 		],
 		"description": "is invoked immediately before mounting occurs."
+	},
+
+	"shouldComponentUpdate": {
+		"prefix": "should",
+		"body": [
+			"shouldComponentUpdate(nextProps, nextState){",
+			"\treturn true;",
+			"\t$0",
+			"}"
+		],
+		"description": "shouldComponentUpdate triggered before the re-rendering starts"
+	},
+
+	"connect": {
+		"prefix": "connect",
+		"body": [
+			"const mapStateToProps = (state) => ({",
+			"\tpage: state.global.page,",
+			"});",
+			"",
+			"function mapDispatchToProps(dispatch) {",
+			"\treturn {",
+			"\t\tupdateSelectedPage: (page) => dispatch(updateSelectedPage(page)),",
+			"\t\tupdateNavigation: (route) => dispatch(updateNavigation(route)),",
+			"\t};",
+			"}",
+			"",
+			"export default connect(mapStateToProps, mapDispatchToProps)(\t$0);"
+		],
+		"description": "provides basic global props and dispatch functions."
 	}
 }

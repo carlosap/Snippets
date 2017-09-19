@@ -35,5 +35,30 @@
 			"$0"
 		],
 		"description": "local varibale using :"
+	},
+	"newlist": {
+		"prefix": "newlist",
+		"body": [
+			"var ${1:varName} = make([]${2:listType}, 0)",
+			"$0"
+		],
+		"description": "Creates a Go Slice Variable"
+	},
+	"err": {
+		"prefix": "err",
+		"body": [
+			"if err != nil {",
+			"\t$0",
+			"}"			
+		],
+		"description": "checks if error is not nil (null)"
+	},
+	"split": {
+		"prefix": "split",
+		"body": [
+			"${1:varname} := strings.Split(${2:stringToSplit}, ${3:deliValue})",
+			"\t$0"	
+		],
+		"description": "splits a deliminated item by ','"
 	}
 }
