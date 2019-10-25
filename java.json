@@ -21,4 +21,25 @@
 		],
 		"description": "imports spring stereotype Component"
 	},
+
+	"Property Setter": {
+		"prefix": "set",
+		"body": [
+			"public void set$1(String $2) {",
+			"\tthis.$2 = $2;",
+			"}",
+			"$0"
+		],
+		"description": "Creates a setter function of a private field"
+	},
+	"Property Getter": {
+		"prefix": "get",
+		"body": [
+			"public ${1:returntype} get${2:privatefield}() {",
+			"\treturn ${3:privatefield};",
+			"}",
+			"$0"
+		],
+		"description": "Creates a getter function of a private field"
+	},
 }
