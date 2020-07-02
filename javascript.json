@@ -1,5 +1,16 @@
 {
 
+	"For Loop": {
+		"prefix": "for1",
+		"body": [
+			"for (var ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
+			"\tvar ${3:element} = ${2:array}[${1:index}];",
+			"\t$0",
+			"}"
+		],
+		"description": "For Loop"
+	},
+
 	"Print to console": {
 		"prefix": "log",
 		"body": [
@@ -20,9 +31,8 @@
 		],
 		"description": "Try and Catch"
 	},
-	//Redux/React- Actions
 
-
+	//------------------------------Redux/React- Actions---------------------------------
 	"comp": {
 		"prefix": "comp",
 		"body": [
@@ -42,6 +52,7 @@
 		],
 		"description": "Basic React Component"
 	},
+
 	"compitem": {
 		"prefix": "compitem",
 		"body": [
@@ -59,6 +70,7 @@
 		],
 		"description": "Basic React Component without imports"
 	},
+	
 	"map": {
 		"prefix": "map",
 		"body": [
@@ -74,17 +86,6 @@
       "})}"
 		],
 		"description": "JXS Map collection"
-	},
-
-	"For Loop": {
-		"prefix": "for1",
-		"body": [
-			"for (var ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
-			"\tvar ${3:element} = ${2:array}[${1:index}];",
-			"\t$0",
-			"}"
-		],
-		"description": "For Loop"
 	},
 
 	"componentDidMount": {

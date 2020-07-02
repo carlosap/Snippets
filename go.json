@@ -36,6 +36,14 @@
 		],
 		"description": "local varibale using :"
 	},
+	"newvar": {
+		"prefix": "newvar",
+		"body": [
+			"var ${1:varName} ${2:varType} = ${3:varValue}",
+			"$0"
+		],
+		"description": "local varibale using :"
+	},
 	"newlist": {
 		"prefix": "newlist",
 		"body": [
